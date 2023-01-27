@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace SistemaVendas.Models
 {
-    public class Vendedor
+    public class Servico
     {
         public int Id {get; set;}
         public string Nome {get; set;}
-        public string Login {get; set;}
-        public string Senha {get; set;}
+        public string Descricao {get; set;}
     }
 }
