@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SistemaVendas.Context;
+using SistemaVendas.Models;
 
 namespace SistemaVendas.Repository
 {
@@ -14,5 +15,11 @@ namespace SistemaVendas.Repository
           {
             _context = context;
           }        
+
+          public void cadastrar(Vendedor vendedor)
+          {
+            _context.Vendedores.Add(vendedor);
+            _context.SaveChanges();
+          }
     }
 }
