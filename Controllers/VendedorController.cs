@@ -36,7 +36,10 @@ namespace SistemaVendas.Controllers
             var vendedor = _repository.ObterPorId(id);
 
             if(vendedor is not null)
-               return Ok(vendedor);
+            {
+               var vendedorDto = new ObterVendedorDto(vendedor);
+               return Ok(vendedorDto);
+            }
 
             else
                return NotFound(new {Mesagem = "Vendedor não encontrado"});
