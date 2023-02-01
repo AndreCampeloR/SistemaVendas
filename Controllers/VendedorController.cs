@@ -19,7 +19,8 @@ namespace SistemaVendas.Controllers
         {
             _repository = repository;
         }
-
+        
+        [HttpPost]
         public IActionResult Cadastrar(CadastrarVendedorDto dto)
         {
             var vendedor = new Vendedor(dto);
