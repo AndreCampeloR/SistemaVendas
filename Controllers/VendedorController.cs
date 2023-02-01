@@ -44,5 +44,12 @@ namespace SistemaVendas.Controllers
             else
                return NotFound(new {Mesagem = "Vendedor não encontrado"});
         }
+
+        [HttpGet("ObterPorNome/{nome}")]
+        public IActionResult ObterPorNome(string nome)
+        {
+            var vendedores = _repository.ObterPorNome(nome);
+            return Ok(vendedores);
+        }
     }
 }
