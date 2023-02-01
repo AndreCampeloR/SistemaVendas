@@ -20,9 +20,14 @@ namespace SistemaVendas.Controllers
             _repository = repository;
         }
 
-        public IActionResult Cadastar(CadastrarVendedorDto dto)
+        public IActionResult Cadastrar(CadastrarVendedorDto dto)
         {
-            var Vendedor = new Vendedor(dto);
+            var vendedor = new Vendedor(dto);
+
+            _repository.Cadastrar(vendedor);
+
+            return Ok(vendedor);
+
         }
     }
 }

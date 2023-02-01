@@ -16,7 +16,7 @@ namespace SistemaVendas.Repository
             _context = context;
           }        
 
-          public void cadastrar(Vendedor vendedor)
+          public void Cadastrar(Vendedor vendedor)
           {
             _context.Vendedores.Add(vendedor);
             _context.SaveChanges();
