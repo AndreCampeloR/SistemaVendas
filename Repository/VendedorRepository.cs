@@ -44,5 +44,11 @@ namespace SistemaVendas.Repository
 
             return vendedor;
           }
+
+          public void DeletarVendedor(Vendedor vendedor)
+          {
+            _context.Vendedores.Remove(vendedor);
+            _context.SaveChanges();
+          }
     }
 }
