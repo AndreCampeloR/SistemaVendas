@@ -20,7 +20,14 @@ namespace SistemaVendas.Models
 
         public Vendedor(CadastrarVendedorDto dto)
         {
-            Nome = dto.Nome;
+            Nome  = dto.Nome;
+            Login = dto.Login;
+            Senha = dto.Senha;
+        }
+
+        public void MapearAtualizarVendedorDto(AtualizarVendedorDto dto)
+        {
+            Nome  = dto.Nome;
             Login = dto.Login;
             Senha = dto.Senha;
         }
