@@ -36,5 +36,13 @@ namespace SistemaVendas.Repository
                                                 .ToList();
             return vendedores;
           }
+
+          public Vendedor AtualizarVendedor(Vendedor vendedor)
+          {
+            _context.Vendedores.Update(vendedor);
+            _context.SaveChanges();
+
+            return vendedor;
+          }
     }
 }
