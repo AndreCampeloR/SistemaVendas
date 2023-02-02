@@ -50,5 +50,11 @@ namespace SistemaVendas.Repository
             _context.Vendedores.Remove(vendedor);
             _context.SaveChanges();
           }
+
+          public void AtualizarSenha(Vendedor vendedor, AtualizarSenhaVendedorDto dto)
+          {
+             vendedor.Senha = dto.Senha;
+             AtualizarVendedor(vendedor);
+          }
     }
 }
