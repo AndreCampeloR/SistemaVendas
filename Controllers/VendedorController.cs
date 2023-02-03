@@ -29,6 +29,21 @@ namespace SistemaVendas.Controllers
 
             return Ok(vendedor);
         }
+
+         [HttpGet]
+        public IActionResult Listar()
+        {
+            var vendedor = _repository.Listar();
+
+            if(vendedor is not null)
+            {
+               return Ok(vendedor);
+            }
+            else
+            {
+            return NotFound(new {Mesagem = "vendedor não encontrado"});
+            }
+        }
         
         [HttpGet("{id}")]
         public IActionResult ObterPorId(int id)

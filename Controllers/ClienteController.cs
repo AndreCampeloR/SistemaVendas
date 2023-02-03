@@ -31,6 +31,21 @@ namespace SistemaVendas.Controllers
             return Ok(cliente);
         }
 
+        [HttpGet]
+        public IActionResult Listar()
+        {
+            var cliente = _repository.Listar();
+
+            if(cliente is not null)
+            {
+               return Ok(cliente);
+            }
+            else
+            {
+            return NotFound(new {Mesagem = "Cliente não encontrado"});
+            }
+        }
+
          [HttpGet("{id}")]
         public IActionResult ObterPorId(int id)
         {
@@ -43,7 +58,9 @@ namespace SistemaVendas.Controllers
             }
 
             else
+            {
                return NotFound(new {Mesagem = "Cliente não encontrado"});
+            }
         }
 
         [HttpGet("ObterPorNome/{nome}")]

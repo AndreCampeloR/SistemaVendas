@@ -26,6 +26,12 @@ namespace SistemaVendas.Repository
             return pedido;
         }
 
+        public List<Pedido> Listar()
+        {
+            var pedido = _context.Pedidos.ToList();
+            return pedido;
+        }
+
         public Pedido ObterPorId(int id)
         {
             var pedido = _context.Pedidos.Include(x => x.Vendedor)

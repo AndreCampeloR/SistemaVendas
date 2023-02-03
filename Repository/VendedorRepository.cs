@@ -23,6 +23,12 @@ namespace SistemaVendas.Repository
             _context.SaveChanges();
           }
 
+          public List<Vendedor> Listar()
+          {
+            var vendedor = _context.Vendedores.ToList();
+            return vendedor;
+          }
+
           public Vendedor ObterPorId(int id)
           {
             var vendedor = _context.Vendedores.Find(id);
