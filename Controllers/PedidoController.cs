@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SistemaVendas.Dto;
+using SistemaVendas.Dto.pedido;
 using SistemaVendas.Models;
 using SistemaVendas.Repository;
 
@@ -42,6 +43,44 @@ namespace SistemaVendas.Controllers
 
             else
                return NotFound(new {Mesagem = "Pedido não encontrado"});
+        }
+
+
+
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, AtualizarPedidoDto dto)
+        {
+            var pedido = _repository.ObterPorId(id);
+
+            if(pedido is not null)
+            {
+                pedido.MapearAtualizarPedidoDto(dto);
+                _repository.AtualizarPedido(pedido);
+                
+                return Ok(pedido);
+            }
+            else
+            {
+                return NotFound(new { Mensagem = "Pedido não encontrado"});   
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            var pedido = _repository.ObterPorId(id);
+
+            if(pedido is not null)
+            {
+                _repository.DeletarPedido(pedido);
+                
+                return NoContent();
+            }
+            else
+            {
+                return NotFound(new { Mensagem = "Pedido não encontrado"});   
+            }
         }
     }
 }

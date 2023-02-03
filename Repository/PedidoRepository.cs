@@ -32,5 +32,21 @@ namespace SistemaVendas.Repository
                                          .FirstOrDefault(x => x.Id == id);
             return pedido;
         }
+
+
+
+         public Pedido AtualizarPedido(Pedido Pedido)
+          {
+            _context.Pedidos.Update(Pedido);
+            _context.SaveChanges();
+
+            return Pedido;
+          }
+
+          public void DeletarPedido(Pedido Pedido)
+          {
+            _context.Pedidos.Remove(Pedido);
+            _context.SaveChanges();
+          }
     }
 }
