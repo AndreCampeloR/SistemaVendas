@@ -44,10 +44,33 @@ namespace SistemaVendas.Controllers
             else
                return NotFound(new {Mesagem = "Pedido não encontrado"});
         }
+         [HttpGet("ObterVendedorPedido/{id}")]
+        public IActionResult ObterVendedorPedido(int id)
+        {
+            var pedido = _repository.ObterVendedorPedido(id);
 
+            if(pedido is not null)
+            {
+               return Ok(pedido);
+            }
 
+            else
+               return NotFound(new {Mesagem = "Pedido não encontrado"});
+        }
+         [HttpGet("ObterClientePedido/{id}")]
+        public IActionResult ObterClientePedido(int id)
+        {
+            var pedido = _repository.ObterCleintePedido(id);
 
+            if(pedido is not null)
+            {
+               return Ok(pedido);
+            }
 
+            else
+               return NotFound(new {Mesagem = "Pedido não encontrado"});
+        }
+        
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, AtualizarPedidoDto dto)
         {
