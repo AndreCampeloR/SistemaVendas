@@ -37,7 +37,7 @@ namespace SistemaVendas.Repository
             return cliente;
           }
 
-          public Cliente AtualizarVendedor(Cliente cliente)
+          public Cliente AtualizarCliente(Cliente cliente)
           {
             _context.Clientes.Update(cliente);
             _context.SaveChanges();
