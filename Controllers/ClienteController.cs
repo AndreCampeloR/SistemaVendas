@@ -38,7 +38,7 @@ namespace SistemaVendas.Controllers
 
             if(cliente is not null)
             {
-               var clienteDto = new ObterVendedorDto(cliente);
+               var clienteDto = new ObterClientesDto(cliente);
                return Ok(clienteDto);
             }
 
