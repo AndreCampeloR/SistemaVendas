@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SistemaVendas.Context;
+using SistemaVendas.Dto.pedido;
 using SistemaVendas.Models;
 
 namespace SistemaVendas.Repository
@@ -33,7 +34,20 @@ namespace SistemaVendas.Repository
             return pedido;
         }
 
-
+        public List<ObterPedidoDto> ObterVendedorPedido(int id)
+        {
+            var pedido = _context.Pedidos.Where(x => x.VendedorId == id)
+                                                .Select(x => new ObterPedidoDto(x))
+                                                .ToList();
+            return pedido;
+        }
+        public List<ObterPedidoDto> ObterCleintePedido(int id)
+        {
+            var pedido = _context.Pedidos.Where(x => x.ClienteId == id)
+                                                .Select(x => new ObterPedidoDto(x))
+                                                .ToList();
+            return pedido;
+        }
 
          public Pedido AtualizarPedido(Pedido Pedido)
           {
