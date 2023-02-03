@@ -29,7 +29,7 @@ namespace SistemaVendas.Repository
             return cliente;
           }
 
-          public List<ObterClienteDto> ObterPorNome(string nome)
+          public List<ObterClientesDto> ObterPorNome(string nome)
           {
             var cliente = _context.Clientes.Where(x => x.Nome.Contains(nome))
                                                 .Select(x => new ObterClientesDto(x))
@@ -54,7 +54,7 @@ namespace SistemaVendas.Repository
           public void AtualizarSenha(Cliente cliente, AtualizarSenhaClienteDto dto)
           {
              cliente.Senha = dto.Senha;
-             AtualizarVendedor(cliente);
+             AtualizarCliente(cliente);
           }
     }
 }

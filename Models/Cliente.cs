@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SistemaVendas.Dto;
+using SistemaVendas.Dto.cliente;
 
 namespace SistemaVendas.Models
 {
@@ -19,6 +20,13 @@ namespace SistemaVendas.Models
         }
 
         public Cliente(CadastrarClienteDto dto)
+        {
+            Nome  = dto.Nome;
+            Login = dto.Login;
+            Senha = dto.Senha;
+        }
+
+         public void MapearAtualizarClienteDto(AtualizarClienteDto dto)
         {
             Nome  = dto.Nome;
             Login = dto.Login;
