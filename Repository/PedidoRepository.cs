@@ -16,10 +16,12 @@ namespace SistemaVendas.Repository
             _context = context;
         }
 
-        public void Cadastrar(Pedido pedido)
+        public Pedido Cadastrar(Pedido pedido)
         {
             _context.Pedidos.Add(pedido);
             _context.SaveChanges();
+
+            return pedido;
         }
     }
 }
