@@ -21,5 +21,7 @@ namespace SistemaVendas.Repository
             _context.Clientes.Add(cliente);
             _context.SaveChanges();
         }
+
+        
     }
 }
