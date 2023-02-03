@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SistemaVendas.Context;
+using SistemaVendas.Dto.cliente;
 using SistemaVendas.Models;
 
 namespace SistemaVendas.Repository
@@ -22,6 +23,38 @@ namespace SistemaVendas.Repository
             _context.SaveChanges();
         }
 
-        
+         public Cliente ObterPorId(int id)
+          {
+            var cliente = _context.Clientes.Find(id);
+            return cliente;
+          }
+
+          public List<ObterClienteDto> ObterPorNome(string nome)
+          {
+            var cliente = _context.Clientes.Where(x => x.Nome.Contains(nome))
+                                                .Select(x => new ObterClientesDto(x))
+                                                .ToList();
+            return cliente;
+          }
+
+          public Cliente AtualizarVendedor(Cliente cliente)
+          {
+            _context.Clientes.Update(cliente);
+            _context.SaveChanges();
+
+            return cliente;
+          }
+
+          public void DeletarCliente(Cliente cliente)
+          {
+            _context.Clientes.Remove(cliente);
+            _context.SaveChanges();
+          }
+
+          public void AtualizarSenha(Cliente cliente, AtualizarSenhaClienteDto dto)
+          {
+             cliente.Senha = dto.Senha;
+             AtualizarVendedor(cliente);
+          }
     }
 }
