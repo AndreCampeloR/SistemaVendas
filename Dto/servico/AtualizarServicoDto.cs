@@ -7,6 +7,7 @@ namespace SistemaVendas.Dto.servico
 {
     public class AtualizarServicoDto
     {
-        
+        public string? Nome { get; set; }
+        public string? Descricao { get; set; }
     }
 }
