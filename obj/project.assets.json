@@ -3685,24 +3685,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andre\\.nuget\\packages\\": {}
+    "C:\\Users\\andre.campelo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Projetos\\GitHub\\SistemaVendas\\SistemaVendas.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\GitHub\\SistemaVendas\\api\\SistemaVendas.csproj",
       "projectName": "SistemaVendas",
-      "projectPath": "A:\\Projetos\\GitHub\\SistemaVendas\\SistemaVendas.csproj",
-      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-      "outputPath": "A:\\Projetos\\GitHub\\SistemaVendas\\obj\\",
+      "projectPath": "C:\\xampp\\htdocs\\GitHub\\SistemaVendas\\api\\SistemaVendas.csproj",
+      "packagesPath": "C:\\Users\\andre.campelo\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\GitHub\\SistemaVendas\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\andre.campelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
