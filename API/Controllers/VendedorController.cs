@@ -30,7 +30,7 @@ namespace SistemaVendas.Controllers
             return Ok(vendedor);
         }
 
-         [HttpGet]
+         [HttpGet("Listar")]
         public IActionResult Listar()
         {
             var vendedor = _repository.Listar();
