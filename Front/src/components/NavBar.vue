@@ -61,7 +61,7 @@
               <li class="nav-item dropdown" id="contas">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
-                  Conta de usuário
+                  usuário
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <router-link class="dropdown-item" to="#">Login</router-link>
@@ -89,6 +89,6 @@
   
   <style scoped>
     #contas{
-      margin-left: 125%;
+      margin-left: 145%;
     }
   </style>
