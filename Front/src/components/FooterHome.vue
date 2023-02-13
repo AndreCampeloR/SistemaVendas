@@ -1,5 +1,5 @@
 <template>
-    <footer id="footer">
+    <footer id="footer"> 
        <p>Make Your Burger &copy; 2023</p>
     </footer>
 </template>
@@ -19,6 +19,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;    
 }
 </style>
