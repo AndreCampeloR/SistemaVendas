@@ -29,7 +29,7 @@ namespace SistemaVendas.Controllers
             return Ok(item);
         }
         
-        [HttpGet]
+        [HttpGet("Listar")]
         public IActionResult Listar()
         {
             var item = _repository.Listar();

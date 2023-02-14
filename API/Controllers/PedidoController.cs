@@ -31,7 +31,7 @@ namespace SistemaVendas.Controllers
             return Ok(pedido);
         }
 
-         [HttpGet]
+        [HttpGet("Listar")]
         public IActionResult Listar()
         {
             var pedido = _repository.Listar();
