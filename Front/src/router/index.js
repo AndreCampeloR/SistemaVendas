@@ -14,8 +14,9 @@ import CadastrarServico from '../views/ServicoView/CadastrarServicoView.vue'
 import AtualizarServico from '../views/ServicoView/AtualizarServicoView.vue'
 
 
-import ListarPedido from '../views/Pedido/CadastrarPedido.vue'
-import CadastrarPedido from '../views/Pedido/CadastrarPedido.vue'
+import ListarPedido from '../views/PedidoView/ListarPedidoView.vue'
+import CadastrarPedido from '../views/PedidoView/CadastrarPedidoView.vue'
+import AtualizarPedido from '../views/PedidoView/AtualizarPedidoView.vue'
 
 const routes = [
   {
@@ -23,6 +24,7 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
 
 
   {
@@ -78,6 +80,7 @@ const routes = [
   },
 
 
+
   {
     path: '/pedido/listar',
     name: 'ListarPedido',
@@ -87,6 +90,11 @@ const routes = [
     path: '/pedido/cadastrar',
     name: 'CadastrarPedido',
     component: CadastrarPedido
+  },
+  {
+    path: '/pedido/atualizar/:id',
+    name: 'AtualizarPedido',
+    component: AtualizarPedido
   },
   
 
