@@ -1,16 +1,16 @@
 <template>
     <div class="main-container">
-      <FormCadastro/>
+      <AtualizarVendedor/>
     </div>
   </template>
   
   <script>
-  import FormCadastro from '@/components/FormCadastro.vue';
+  import AtualizarVendedor from '@/components/Atualizar.vue';
 
   export default {
     name: 'CadastrarVendedor',
     components: {
-      FormCadastro
-    }
+    AtualizarVendedor
+}
   }
   </script>
