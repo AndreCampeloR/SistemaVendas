@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
-import ListarVendedor from '../views/Vendedor/ListarVendedor.vue'
-import CadastrarVendedor from '../views/Vendedor/CadastrarVendedor.vue'
-import AtualizarVendedor from '../views/Vendedor/AtualizarVendedor.vue'
+import ListarVendedorView from '../views/VendedorView/ListarVendedorView.vue'
+import CadastrarVendedorView from '../views/VendedorView/CadastrarVendedorView.vue'
+import AtualizarVendedorView from '../views/VendedorView/AtualizarVendedorView.vue'
 
 import ListarCliente from '../views/Cliente/CadastrarCliente.vue'
 import CadastrarCliente from '../views/Cliente/CadastrarCliente.vue'
@@ -22,17 +22,17 @@ const routes = [
   {
     path: '/vendedor/listar',
     name: 'ListarVendedor',
-    component: ListarVendedor
+    component: ListarVendedorView
   },
   {
     path: '/vendedor/cadastrar',
     name: 'CadastrarVendedor',
-    component: CadastrarVendedor
+    component: CadastrarVendedorView
   },
   {
     path: '/vendedor/:id',
     name: 'AtualizarVendedor',
-    component: AtualizarVendedor
+    component: AtualizarVendedorView
   },
 
 

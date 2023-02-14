@@ -5,10 +5,10 @@
   </template>
   
   <script>
-  import AtualizarVendedor from '@/components/Atualizar.vue';
+  import AtualizarVendedor from '../../components/Vendedor/AtualizarVendedor.vue';
 
   export default {
-    name: 'CadastrarVendedor',
+    name: 'AtualizarVendedorView',
     components: {
     AtualizarVendedor
 }

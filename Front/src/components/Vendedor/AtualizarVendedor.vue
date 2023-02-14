@@ -24,7 +24,7 @@
   </template>
   
   <script>
-  import VendedorDataService from '../services/VendedorDataService';
+  import VendedorDataService from '../../services/VendedorDataService';
   export default {
       name: "AtualizarVendedor",
       data(){

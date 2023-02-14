@@ -1,16 +1,16 @@
 <template>
     <div class="main-container">
-      <FormCadastro/>
+      <TabelaHome/>
     </div>
   </template>
   
   <script>
-  import FormCadastro from '@/components/FormCadastro.vue';
-
+  import TabelaHome from '@/components/TabelaHome.vue';
+  
   export default {
-    name: 'CadastrarVendedor',
+    name: 'ListarVendedorView',
     components: {
-      FormCadastro
+      TabelaHome
     }
   }
   </script>
