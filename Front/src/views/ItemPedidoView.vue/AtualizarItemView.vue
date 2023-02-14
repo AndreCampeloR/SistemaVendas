@@ -8,7 +8,7 @@
   import AtualizarItem from '../../components/itemPedido/AtualizarItem.vue'
 
   export default {
-    name: 'AtualizarVendedorView',
+    name: 'AtualizarItemView',
     components: {
         AtualizarItem
 }
