@@ -5,9 +5,9 @@ import ListarVendedorView from '../views/VendedorView/ListarVendedorView.vue'
 import CadastrarVendedorView from '../views/VendedorView/CadastrarVendedorView.vue'
 import AtualizarVendedorView from '../views/VendedorView/AtualizarVendedorView.vue'
 
-import ListarCliente from '../views/ClienteView/CadastrarCliente.vue'
-import CadastrarCliente from '../views/ClienteView/CadastrarCliente.vue'
-import AtualizarCliente from '../views/ClienteView/CadastrarCliente.vue'
+import ListarCliente from '../views/ClienteView/ListarClienteView.vue'
+import CadastrarCliente from '../views/ClienteView/CadastrarClienteView.vue'
+import AtualizarCliente from '../views/ClienteView/AtualizarClienteView.vue'
 
 
 import ListarPedido from '../views/Pedido/CadastrarPedido.vue'

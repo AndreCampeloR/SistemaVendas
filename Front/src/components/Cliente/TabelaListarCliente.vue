@@ -14,8 +14,8 @@
               <td>{{ cliente.nome }}</td>
               <td>{{ cliente.login }}</td>
               <td>
-                <button class="btn btn-success" @click="editarcliente(cliente.id)">Editar</button>
-                <button class="btn btn-danger" @click="excluircliente(cliente)">Excluir</button>
+                <button class="btn btn-success" @click="editarCliente(cliente.id)">Editar</button>
+                <button class="btn btn-danger" @click="excluirCliente(cliente)">Excluir</button>
               </td>
             </tr>
           </tbody>
@@ -24,31 +24,31 @@
   </template>
   
   <script>
-  import clienteDataService from '../../services/clienteDataService';
+  import ClienteDataService from '../../services/ClienteDataService';
   export default {
-    name: "TabelaListarcliente",
+    name: "TabelaListarCliente",
     data() {
       return{
-        clientees: []
+        clientes: []
       }
     },
     methods: {
-      obterclientees() {
-        clienteDataService.listar()
-          .then(response => this.clientees = response.data)
+      obterClientes() {
+        ClienteDataService.listar()
+          .then(response => this.clientes = response.data)
       },
-      editarcliente(id){
+      editarCliente(id){
         this.$router.push("/cliente/atualizar/"+id)
       },
-      async excluircliente(cliente){
+      async excluirCliente(cliente){
         if(confirm(`Tem certeza que deseja excluir o cliente ${cliente.nome}`)){
-          await clienteDataService.deletar(cliente.id)
-          this.obterclientees();
+          await ClienteDataService.deletar(cliente.id)
+          this.obterClientes();
         }
       }
     },
     mounted(){
-      this.obterclientees()
+      this.obterClientes()
     }
   }
   </script>
