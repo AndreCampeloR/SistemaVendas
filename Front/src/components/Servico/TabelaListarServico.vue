@@ -5,17 +5,17 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nome</th>
-              <th scope="col">Login</th>
+              <th scope="col">descricao</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(cliente, index) in clientes" :key="index">
-              <th scope="row">{{ cliente.id }}</th>
-              <td>{{ cliente.nome }}</td>
-              <td>{{ cliente.login }}</td>
+            <tr v-for="(servico, index) in servicos" :key="index">
+              <th scope="row">{{ servico.id }}</th>
+              <td>{{ servico.nome }}</td>
+              <td>{{ servico.descricao }}</td>
               <td>
-                <button class="btn btn-success" @click="editarCliente(cliente.id)">Editar</button>
-                <button class="btn btn-danger" @click="excluirCliente(cliente)">Excluir</button>
+                <button class="btn btn-success" @click="editarServico(servico.id)">Editar</button>
+                <button class="btn btn-danger" @click="excluirServico(servico)">Excluir</button>
               </td>
             </tr>
           </tbody>
@@ -24,31 +24,31 @@
   </template>
   
   <script>
-  import ClienteDataService from '../../services/ClienteDataService';
+  import ServicoDataService from '../../services/ServicoDataService';
   export default {
-    name: "TabelaListarCliente",
+    name: "TabelaListarServico",
     data() {
       return{
-        clientes: []
+        servico: []
       }
     },
     methods: {
-      obterClientes() {
-        ClienteDataService.listar()
-          .then(response => this.clientes = response.data)
+      obterServicos() {
+        ServicoDataService.listar()
+          .then(response => this.servicos = response.data)
       },
-      editarCliente(id){
-        this.$router.push("/cliente/atualizar/"+id)
+      editarServico(id){
+        this.$router.push("/servico/atualizar/"+id)
       },
-      async excluirCliente(cliente){
-        if(confirm(`Tem certeza que deseja excluir o cliente ${cliente.nome}`)){
-          await ClienteDataService.deletar(cliente.id)
-          this.obterClientes();
+      async excluirServico(servico){
+        if(confirm(`Tem certeza que deseja excluir o servico ${servico.nome}`)){
+          await ServicoDataService.deletar(servico.id)
+          this.obterServicos();
         }
       }
     },
     mounted(){
-      this.obterClientes()
+      this.obterServicos()
     }
   }
   </script>
