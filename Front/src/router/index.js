@@ -18,6 +18,11 @@ import ListarPedido from '../views/PedidoView/ListarPedidoView.vue'
 import CadastrarPedido from '../views/PedidoView/CadastrarPedidoView.vue'
 import AtualizarPedido from '../views/PedidoView/AtualizarPedidoView.vue'
 
+
+import ListarItem from '../views/ItemPedidoView.vue/ListarItemView.vue'
+import CadastrarItem from '../views/ItemPedidoView.vue/CadastrarItemView.vue'
+import AtualizarItem from '../views/ItemPedidoView.vue/AtualizarItemView.vue'
+
 const routes = [
   {
     path: '/',
@@ -95,6 +100,24 @@ const routes = [
     path: '/pedido/atualizar/:id',
     name: 'AtualizarPedido',
     component: AtualizarPedido
+  },
+
+
+
+  {
+    path: '/itemPedido/listar',
+    name: 'ListarItem',
+    component: ListarItem
+  },
+  {
+    path: '/itemPedido/cadastrar',
+    name: 'CadastrarItem',
+    component: CadastrarItem
+  },
+  {
+    path: '/itemPedido/atualizar/:id',
+    name: 'AtualizarItem',
+    component: AtualizarItem
   },
   
 

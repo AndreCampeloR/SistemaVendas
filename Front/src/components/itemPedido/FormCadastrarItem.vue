@@ -20,14 +20,14 @@
               <br>
               <input type="number" v-model="cadastro.valor" class="form-control" min="1">
           </div>
-          <button class="btn btn-success" style="margin-top: 4%;" @click="cadastrarVendedor">Cadastrar</button>
+          <button class="btn btn-success" style="margin-top: 4%;" @click="cadastrarItem">Cadastrar</button>
       </div>
     </div>
   </template>
   
   <script>
   import ServicoDataService from '../../services/ServicoDataService';
-  import ItemPedidioDataService from '../../services/ItemPedidoDataService';
+  import ItemPedidoDataService from '../../services/ItemPedidoDataService';
   export default {
       name: "FormCadastroItem",
       data(){
@@ -42,13 +42,14 @@
           }
       },
       methods: {
-          cadastrarVendedor(){
+          cadastrarItem(){
               if(Number(this.cadastro.quantidade) <= 0 || Number(this.cadastro.valor) <= 0){
                   alert("Quantidade e valor devem ter um valor minimo de 1")
               }
               else{
-                  ItemPedidioDataService.cadastrar(this.cadastro)
+                  ItemPedidoDataService.cadastrar(this.cadastro)
                   .then(() => {
+                    console.log("deu")
                       this.$router.push('/pedido/'+this.cadastro.pedidoId+'/itens-pedido/listar')
                   })
               }
