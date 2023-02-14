@@ -32,7 +32,7 @@
           cadastrarServico(){
               var data = {
                   Nome: this.cadastro.Nome,
-                  Servico: this.cadastro.Servico
+                  Descricao: this.cadastro.Descricao
               }
               ServicoDataService.cadastrar(data)
                   .then(() => {

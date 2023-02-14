@@ -29,7 +29,7 @@
     name: "TabelaListarServico",
     data() {
       return{
-        servico: []
+        servicos: []
       }
     },
     methods: {

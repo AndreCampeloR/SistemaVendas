@@ -9,6 +9,10 @@ import ListarCliente from '../views/ClienteView/ListarClienteView.vue'
 import CadastrarCliente from '../views/ClienteView/CadastrarClienteView.vue'
 import AtualizarCliente from '../views/ClienteView/AtualizarClienteView.vue'
 
+import ListarServico from '../views/ServicoView/ListarServicoView.vue'
+import CadastrarServico from '../views/ServicoView/CadastrarServicoView.vue'
+import AtualizarServico from '../views/ServicoView/AtualizarServicoView.vue'
+
 
 import ListarPedido from '../views/Pedido/CadastrarPedido.vue'
 import CadastrarPedido from '../views/Pedido/CadastrarPedido.vue'
@@ -53,6 +57,24 @@ const routes = [
     path: '/cliente/atualizar/:id',
     name: 'AtualizarCliente',
     component: AtualizarCliente
+  },
+
+
+
+  {
+    path: '/servico/listar',
+    name: 'ListarServico',
+    component: ListarServico
+  },
+  {
+    path: '/servico/cadastrar',
+    name: 'CadastrarServico',
+    component: CadastrarServico
+  },
+  {
+    path: '/servico/atualizar/:id',
+    name: 'AtualizarServico',
+    component: AtualizarServico
   },
 
 
