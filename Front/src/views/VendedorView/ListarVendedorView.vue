@@ -1,16 +1,16 @@
 <template>
     <div class="main-container">
-      <TabelaHome/>
+      <TabelaListarVendedor/>
     </div>
   </template>
   
   <script>
-  import TabelaHome from '@/components/TabelaHome.vue';
+  import TabelaListarVendedor from '@/components/Vendedor/TabelaListarVendedor.vue';
   
   export default {
     name: 'ListarVendedorView',
     components: {
-      TabelaHome
+      TabelaListarVendedor
     }
   }
   </script>

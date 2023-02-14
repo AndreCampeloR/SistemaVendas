@@ -24,9 +24,9 @@
   </template>
   
   <script>
-  import VendedorDataService from '../services/VendedorDataService';
+  import VendedorDataService from '../../services/VendedorDataService';
   export default {
-    name: "TabelaHome",
+    name: "TabelaListarVendedor",
     data() {
       return{
         vendedores: []

@@ -1,16 +1,16 @@
 <template>
     <div class="main-container">
-      <FormCadastro/>
+      <FormCadastroVendedor/>
     </div>
   </template>
   
   <script>
-  import FormCadastro from '@/components/FormCadastro.vue';
+  import FormCadastroVendedor from '@/components/Vendedor/FormCadastroVendedor.vue';
 
   export default {
     name: 'CadastrarVendedorView',
     components: {
-      FormCadastro
+      FormCadastroVendedor
     }
   }
   </script>

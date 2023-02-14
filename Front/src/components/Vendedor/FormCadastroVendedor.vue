@@ -20,9 +20,9 @@
   </template>
   
   <script>
-  import VendedorDataService from '../services/VendedorDataService';
+  import VendedorDataService from '../../services/VendedorDataService';
   export default {
-      name: "FormCadastro",
+      name: "FormCadastroVendedor",
       data(){
           return{
               cadastro: {
