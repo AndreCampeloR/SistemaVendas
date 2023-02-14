@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 
 import ListarVendedor from '../views/Vendedor/ListarVendedor.vue'
 import CadastrarVendedor from '../views/Vendedor/CadastrarVendedor.vue'
+import AtualizarVendedor from '../views/Vendedor/AtualizarVendedor.vue'
 
 import ListarCliente from '../views/Cliente/CadastrarCliente.vue'
 import CadastrarCliente from '../views/Cliente/CadastrarCliente.vue'
@@ -27,6 +28,11 @@ const routes = [
     path: '/vendedor/cadastrar',
     name: 'CadastrarVendedor',
     component: CadastrarVendedor
+  },
+  {
+    path: '/vendedor/atualizar',
+    name: 'AtualizarVendedor',
+    component: AtualizarVendedor
   },
 
 
