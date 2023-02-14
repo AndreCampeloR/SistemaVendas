@@ -1,6 +1,6 @@
 <template>
     <div id="cadastro-vendedor">
-      <h3>Atualiazar Vendedor</h3>
+      <h3>Atualizar Vendedor</h3>
       <div class="form" style="padding: 1%;">
           <div>
               <label for="" class="form-label">Id</label>
@@ -16,7 +16,7 @@
           </div>
           <div>
               <label for="" class="form-label">Senha</label>
-              <input type="password" class="form-control" required v-model="updateVendedor.senha">
+              <input type="password" class="form-control" required v-model="vendedor.senha">
           </div>
           <button class="btn btn-success" style="margin-top: 4%;" @click="atualizarVendedor">Cadastrar</button>
       </div>
@@ -33,7 +33,8 @@
               },
               updateVendedor: {
                   nome: "",
-                  senha: ""
+                  senha: "",
+                  login: ""
               }
           }
       },
@@ -41,6 +42,8 @@
           atualizarVendedorData(){
               this.updateVendedor.senha = this.vendedor.senha
               this.updateVendedor.nome = this.vendedor.nome
+              this.updateVendedor.login = this.vendedor.login
+              
           },
           obterVendedor(id){
               VendedorDataService.obterPorId(id)
@@ -53,7 +56,7 @@
               this.atualizarVendedorData()
               VendedorDataService.atualizar(this.$route.params.id, this.updateVendedor)
                   .then(() => {
-                      this.$router.push('vendedor/listar')
+                    this.$router.push({name: 'ListarVendedor'})
                   })
           },
           

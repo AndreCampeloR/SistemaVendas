@@ -1,16 +1,16 @@
 <template>
     <div class="main-container">
-      <AtualizarVendedor/>
+      <AtualizarCliente/>
     </div>
   </template>
   
   <script>
-  import AtualizarVendedor from '../../components/Vendedor/AtualizarVendedor.vue';
+  import AtualizarCliente from '../../components/Cliente/AtualizarCliente.vue'
 
   export default {
     name: 'AtualizarVendedorView',
     components: {
-    AtualizarVendedor
+    AtualizarCliente
 }
   }
   </script>
