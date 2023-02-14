@@ -30,7 +30,7 @@ const routes = [
     component: CadastrarVendedor
   },
   {
-    path: '/vendedor/atualizar',
+    path: '/vendedor/:id',
     name: 'AtualizarVendedor',
     component: AtualizarVendedor
   },
