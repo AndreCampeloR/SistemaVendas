@@ -22,7 +22,7 @@
   <script>
   import ClienteDataService from '../../services/ClienteDataService';
   export default {
-      name: "FormCadastroVendedor",
+      name: "FormCadastroCliente",
       data(){
           return{
               cadastro: {
