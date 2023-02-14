@@ -39,7 +39,7 @@
   import ItemPedidoDataService from '../../services/ItemPedidoDataService';
   import PedidoDataService from '../../services/PedidoDataService.js';
   export default {
-    name: "listarItemPedidos",
+    name: "TabelaListarItem",
     data() {
       return{
         itemPedidoId: this.$route.params.pedidoId,
