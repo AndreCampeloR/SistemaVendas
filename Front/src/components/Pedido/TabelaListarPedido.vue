@@ -13,8 +13,8 @@
           <tr v-for="(pedido, index) in pedidos" :key="index">
             <th scope="row">{{ pedido.id }}</th>
             <td scope="row">{{ toLocaleDate(pedido.data) }}</td>
-            <td>{{ pedido.vendedor.nome }}</td>
-            <td>{{ pedido.cliente.nome }}</td>
+            <td>{{ pedido.vendedorId }}</td>
+            <td>{{ pedido.clienteId }}</td>
             <td>
               <button class="btn btn-success" @click="editarPedido(pedido.id)">Editar</button>
               <button class="btn btn-danger" @click="excluirPedido(pedido)">Excluir</button>
