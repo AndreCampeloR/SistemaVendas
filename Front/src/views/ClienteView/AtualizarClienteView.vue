@@ -8,7 +8,7 @@
   import AtualizarCliente from '../../components/Cliente/AtualizarCliente.vue'
 
   export default {
-    name: 'AtualizarVendedorView',
+    name: 'AtualizarClienteView',
     components: {
     AtualizarCliente
 }

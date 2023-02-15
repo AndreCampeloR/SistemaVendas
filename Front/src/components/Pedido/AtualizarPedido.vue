@@ -8,7 +8,7 @@
           </div>
           <div>
               <label for="" class="form-label">Vendedor Atual</label>
-              <input type="text" class="form-control" required placeholder="Id" :value="pedido.vendedor.nome" disabled>
+              <input type="text" class="form-control" required placeholder="Id" :value="pedido.vendedorId" disabled>
           </div>
           <div>
               <label for="" class="form-label">Vendedor Novo</label>
@@ -19,7 +19,7 @@
           </div>
           <div>
               <label for="" class="form-label">Cliente Atual</label>
-              <input type="text" class="form-control" required placeholder="Id" :value="pedido.cliente.nome" disabled>
+              <input type="text" class="form-control" required placeholder="Id" :value="pedido.clienteId" disabled>
           </div>
           <div>
               <label for="" class="form-label">Cliente Novo</label>
@@ -39,7 +39,7 @@
   import ClienteDataService from '../../services/ClienteDataService'
   import VendedorDataService from '../../services/VendedorDataService'
   export default {
-      name: "PedidoUpdate",
+      name: "AtualizarPedido",
       data(){
           return{
               pedido: {

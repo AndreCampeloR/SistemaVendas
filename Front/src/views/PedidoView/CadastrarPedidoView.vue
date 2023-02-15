@@ -8,7 +8,7 @@
   import FormCadastroPedido from '../../components/Pedido/FormCadastroPedido.vue';
 
   export default {
-    name: 'CadastrarCliente',
+    name: 'CadastrarPedidoView',
     components: {
       FormCadastroPedido
     }

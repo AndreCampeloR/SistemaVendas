@@ -5,10 +5,10 @@
   </template>
   
   <script>
-  import AtualizarPedido from '../../components/Pedido/AtualizarPedido.vue'
+  import AtualizarPedido from '@/components/Pedido/AtualizarPedido.vue';
 
   export default {
-    name: 'AtualizarVendedorView',
+    name: 'AtualizarPedidoView',
     components: {
     AtualizarPedido
 }
