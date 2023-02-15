@@ -105,7 +105,7 @@ const routes = [
 
 
   {
-    path: '/itemPedido/listar',
+    path: '/itemPedido/pedido/:id',
     name: 'ListarItem',
     component: ListarItemView
   },

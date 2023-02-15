@@ -1,8 +1,9 @@
 <template>
     <div class="col-7 d-flex flex-column align-items-center">
-      <h2>Pedido {{ itemPedidoId }} - {{ Pedido.vendedor.nome }} - {{ Pedido.cliente.nome }}</h2>
-      <p v-if="ItensPedido.length === 0">Esse pedido não possui nenhum item</p>
-      <table class="table table-striped" v-else>
+      <h2>Pedido {{ itemPedidoId }} - {{ Pedido.vendedor.nome }} - {{ Pedido.cliente.nome}}</h2>
+      <p v-for="(item, index) in ItensPedido" :key="index">{{item}}</p>
+      
+      <table class="table table-striped">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -42,7 +43,7 @@
     name: "TabelaListarItem",
     data() {
       return{
-        itemPedidoId: this.$route.params.pedidoId,
+        itemPedidoId: this.$route.params.id,
         ItensPedido: [],
         Pedido: {
           vendedor: {
@@ -55,16 +56,17 @@
       }
     },
     methods: {
-      obterItensPedido() {
-        ItemPedidoDataService.listarPorPedido(this.itemPedidoId)
-          .then(response => this.ItensPedido = response.data)
+    async  obterItensPedido() {
+    await ItemPedidoDataService.listarPorPedido(this.itemPedidoId)
+               .then(response => this.ItensPedido = response.data)
+          
       },
       obterPedidos() {
         PedidoDataService.obterPorId(this.itemPedidoId)
           .then(response => this.Pedido = response.data)
       },
       editarPedido(idPedido, idItem){
-        this.$router.push("/pedido/"+idPedido+"/itens-pedido/atualizar/"+idItem)
+        this.$router.push("/pedido/"+idPedido+"/itemPedido/atualizar/"+idItem)
       },
       async excluirPedido(pedido){
         if(confirm(`Tem certeza que deseja excluir o pedido ${pedido.id}`)){
@@ -74,7 +76,7 @@
         }
       },
       adicionarNovoItem(id){
-        this.$router.push("/pedido/"+id+"/itens-pedido/cadastrar")
+        this.$router.push("/pedido/"+id+"/ItemPedio/cadastrar")
       },
       valorTotal(){
         let valorTotal = 0
@@ -89,8 +91,8 @@
       }
     },
     beforeMount(){
-      this.obterItensPedido()
-      this.obterPedidos()
+     this.obterItensPedido()
+     this.obterPedidos()
     }
   }
   </script>

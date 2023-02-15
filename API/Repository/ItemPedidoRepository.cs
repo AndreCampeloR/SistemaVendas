@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SistemaVendas.Context;
 using SistemaVendas.Models;
+using SistemaVendas.Dto.itemPedido;
 
 namespace SistemaVendas.Repository
 {
@@ -28,6 +30,13 @@ namespace SistemaVendas.Repository
         public List<ItemPedido> Listar()
         {
             var item = _context.ItensPedido.ToList();
+            return item;
+        }
+        public List<ObterItemPedidoDto> ListarPorPedido(int pedidoId)
+        {
+            var item = _context.ItensPedido.Where(x => x.PedidoId == pedidoId)
+                                            .Select(x => new ObterItemPedidoDto(x))
+                                            .ToList();
             return item;
         }
 

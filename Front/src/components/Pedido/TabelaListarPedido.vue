@@ -50,7 +50,7 @@ export default {
       }
     },
     buscarItensPedido(id){
-      this.$router.push('/pedido/'+id+'/itens-pedido/listar')
+      this.$router.push('/itemPedido/pedido/'+id)
     },
     toLocaleDate(date){
       let localeDate = new Date(date)

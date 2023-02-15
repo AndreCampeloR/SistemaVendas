@@ -44,6 +44,21 @@ namespace SistemaVendas.Controllers
             }
         }
 
+        [HttpGet("pedido/{id}")]
+        public IActionResult ListarPorPedido(int id)
+        {
+            var item = _repository.ListarPorPedido(id);
+
+            if(item is not null)
+            {
+                return Ok(item);
+            }
+            else
+            {
+                return NotFound(new { Mensagem = "Não há itens"});
+            }
+        }
+
         [HttpGet("{id}")]
         public IActionResult ConsultarPorId(int id)
         {
