@@ -2,7 +2,7 @@ import http from "../http-common.js"
 
 class ItemPedidoDataService{
     listarPorPedido(id){
-        return http.get('/itemPedido/pedido/'+id)
+        return http.get(`/itemPedido/pedido/${id}`)
     }
     cadastrar(itemPedido){
         return http.post('/itemPedido', itemPedido)

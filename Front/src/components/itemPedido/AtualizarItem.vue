@@ -6,7 +6,7 @@
           <div>
               <label for="" class="form-label">Serviços Atual</label>
               <br>
-              <input type="text" v-model="cadastro.servico.nome" class="form-control" disabled>
+              <input type="text" v-model="Servicos.nome" class="form-control" disabled>
           </div>
           <div>
               <label for="" class="form-label">Serviços Atualizado</label>
@@ -60,7 +60,7 @@
               else{
                   ItemPedidioDataService.atualizar(this.cadastro.id, this.Dto)
                   .then(() => {
-                      this.$router.push('/pedido/'+this.cadastro.pedidoId+'/itens-pedido/listar')
+                    this.$router.push('/itemPedido/pedido/'+this.cadastro.id)
                   })
               }
           },
@@ -71,7 +71,7 @@
             this.Dto.valor = this.cadastro.valor
           },
           getCadastro(){
-            ItemPedidioDataService.obterPorId(this.$route.params.itemPedidoId)
+            ItemPedidioDataService.obterPorId(this.$route.params.id)
             .then((response) => {
                 this.cadastro = response.data
             })

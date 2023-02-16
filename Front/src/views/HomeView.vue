@@ -1,6 +1,6 @@
 <template>
   <div class="main-container">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <h1>Bem vindos</h1>
   </div>
 </template>
 

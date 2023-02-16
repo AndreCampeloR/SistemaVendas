@@ -2,7 +2,7 @@
     <div id="cadastro-vendedor">
       <h3>Novo Item Pedido</h3>
       <div class="form" style="padding: 1%;">
-          <h4>Pedido id: {{ this.$route.params.pedidoId }}</h4>
+          <h4>Pedido id: {{ this.$route.params.id}}</h4>
           <div>
               <label for="" class="form-label">Serviços</label>
               <br>
@@ -33,7 +33,7 @@
       data(){
           return{
               cadastro: {
-                  pedidoId: this.$route.params.pedidoId,
+                  pedidoId: this.$route.params.id,
                   servicoId: "",
                   quantidade: "",
                   valor: ""
@@ -50,7 +50,7 @@
                   ItemPedidoDataService.cadastrar(this.cadastro)
                   .then(() => {
                     console.log("deu")
-                      this.$router.push('/pedido/'+this.cadastro.pedidoId+'/itens-pedido/listar')
+                    this.$router.push('/itemPedido/pedido/1')
                   })
               }
           },

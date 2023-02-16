@@ -48,26 +48,6 @@
                   <router-link class="dropdown-item" to="/pedido/cadastrar">Cadastrar</router-link>
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  Item do Pedido
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <router-link class="dropdown-item" to="/itempedido/listar">Listar Itens do Pedido</router-link>
-                  <router-link class="dropdown-item" to="/itempedido/cadastrar">Cadastrar Itens do Pedido</router-link>
-                </div>
-              </li>
-              <li class="nav-item dropdown" id="contas">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  usuário
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <router-link class="dropdown-item" to="#">Login</router-link>
-                  <router-link class="dropdown-item" to="#">Sign-Up</router-link>
-                </div>
-              </li>
         
             </ul>
           </div>
@@ -88,7 +68,5 @@
   </script>
   
   <style scoped>
-    #contas{
-      margin-left: 145%;
-    }
+  
   </style>

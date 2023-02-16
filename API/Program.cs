@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<VendasContext>(options => 
-options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoHome")));
 
 builder.Services.AddScoped<VendedorRepository>();
 builder.Services.AddScoped<ClienteRepository>();

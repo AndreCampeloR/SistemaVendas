@@ -110,7 +110,7 @@ const routes = [
     component: ListarItemView
   },
   {
-    path: '/itemPedido/cadastrar',
+    path: '/pedido/:id/ItemPedido/cadastrar',
     name: 'CadastrarItem',
     component: CadastrarItemView
   },
