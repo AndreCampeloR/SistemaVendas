@@ -20,7 +20,7 @@
             <td>{{ item.quantidade }}</td>
             <td>{{ item.valor*item.quantidade }}</td>
             <td>
-              <button class="btn btn-success" @click="editarPedido(Pedido.id, item.id)">Editar</button>
+              <button class="btn btn-success" @click="editarPedido(item.id)">Editar</button>
               <button class="btn btn-danger" @click="excluirPedido(item)">Excluir</button>
             </td>
           </tr>
@@ -70,7 +70,7 @@
       async excluirPedido(pedido){
         if(confirm(`Tem certeza que deseja excluir o pedido ${pedido.id}`)){
           await ItemPedidoDataService.deletar(pedido.id)
-          this.obterPedidos()
+          this.obterItensPedido()
           console.log(this.Pedido)
         }
       },

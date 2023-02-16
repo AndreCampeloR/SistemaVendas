@@ -50,7 +50,7 @@
                   ItemPedidoDataService.cadastrar(this.cadastro)
                   .then(() => {
                     console.log("deu")
-                    this.$router.push('/itemPedido/pedido/1')
+                    this.$router.push('/itemPedido/pedido/' + this.cadastro.pedidoId)
                   })
               }
           },

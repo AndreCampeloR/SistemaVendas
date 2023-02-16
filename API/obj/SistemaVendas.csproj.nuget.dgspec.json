@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Projetos\\GitHub\\SistemaVendas\\API\\SistemaVendas.csproj": {}
+    "C:\\xampp\\htdocs\\GitHub\\SistemaVendas\\API\\SistemaVendas.csproj": {}
   },
   "projects": {
-    "A:\\Projetos\\GitHub\\SistemaVendas\\API\\SistemaVendas.csproj": {
+    "C:\\xampp\\htdocs\\GitHub\\SistemaVendas\\API\\SistemaVendas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Projetos\\GitHub\\SistemaVendas\\API\\SistemaVendas.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\GitHub\\SistemaVendas\\API\\SistemaVendas.csproj",
         "projectName": "SistemaVendas",
-        "projectPath": "A:\\Projetos\\GitHub\\SistemaVendas\\API\\SistemaVendas.csproj",
-        "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "A:\\Projetos\\GitHub\\SistemaVendas\\API\\obj\\",
+        "projectPath": "C:\\xampp\\htdocs\\GitHub\\SistemaVendas\\API\\SistemaVendas.csproj",
+        "packagesPath": "C:\\Users\\andre.campelo\\.nuget\\packages\\",
+        "outputPath": "C:\\xampp\\htdocs\\GitHub\\SistemaVendas\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\andre.campelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -72,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

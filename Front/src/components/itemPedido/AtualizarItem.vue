@@ -1,8 +1,8 @@
 <template>
     <div id="cadastro-vendedor">
-      <h3>Atualizar pedido</h3>
+      <h3>Atualizar item pedido</h3>
       <div class="form" style="padding: 1%;">
-          <h3>Pedido {{ this.cadastro.id }}</h3>
+          <h3>Pedido - {{ this.cadastro.id }}</h3>
           <div>
               <label for="" class="form-label">Serviços Atual</label>
               <br>
@@ -60,7 +60,7 @@
               else{
                   ItemPedidioDataService.atualizar(this.cadastro.id, this.Dto)
                   .then(() => {
-                    this.$router.push('/itemPedido/pedido/'+this.cadastro.id)
+                    this.$router.push('/itemPedido/pedido/'+this.cadastro.pedidoId)
                   })
               }
           },
@@ -74,6 +74,7 @@
             ItemPedidioDataService.obterPorId(this.$route.params.id)
             .then((response) => {
                 this.cadastro = response.data
+                console.log(response.data)
             })
           },
           getServicos(){
